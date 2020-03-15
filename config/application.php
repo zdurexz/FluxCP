@@ -4,14 +4,14 @@
 return array(
 	'ServerAddress'				=> 'localhost',				// This value is the hostname:port under which Flux runs. (e.g., example.com or example.com:80)
 	'BaseURI'					=> 'fluxcp',						// The base URI is the base web root on which your application lies.
-	'InstallerPassword'			=> 'secretpassword',		// Installer/updater password.
+	'InstallerPassword'			=> '123456',		// Installer/updater password.
 	'RequireOwnership'			=> true,					// Require the executing user to be owner of the FLUX_ROOT/data/ directory tree? (Better for security)
 															// WARNING: This will be mostly IGNORED on non-POSIX-compliant OSes (e.g. Windows).
 	'DefaultLoginGroup'			=> null,
 	'DefaultCharMapServer'		=> null,
-	'DefaultLanguage'			=> 'en_us',					// Specify the default control panel language (see FLUX_ROOT/lang/ directory for available languages.)
+	'DefaultLanguage'			=> 'en_th',					// Specify the default control panel language (see FLUX_ROOT/lang/ directory for available languages.)
 	'SiteTitle'					=> 'Flux Control Panel',	// This value is only used if the theme decides to use it.
-	'ThemeName'					=> array('default', 'bootstrap'), // Names of the themes you would like list for use in the footer. Themes are in FLUX_ROOT/themes.
+	'ThemeName'					=> array('Glight'), // Names of the themes you would like list for use in the footer. Themes are in FLUX_ROOT/themes.
 	'ScriptTimeLimit'			=> 0,						// Script execution time limit. Specifies (in seconds) how long a page should run before timing out. (0 means forever)
 	'MissingEmblemBMP'			=> 'empty.bmp',				//
 	'ItemIconNameFormat'		=> '%d.png',				// The filename format for item icons (defaults to {itemid}.png).
@@ -230,62 +230,62 @@ return array(
 	// their login status.
 	'MenuItems'		=> array(
 		'MainMenuLabel'		=> array(
-			'HomeLabel'			=> array('module' => 'main'),
+			'หน้าหลัก'			=> array('module' => 'main'),
 			//'ForumLabel'		=> array('exturl' => 'http://www.fluxro.com/community'),	// External forum link
 			//'ForumLabel'		=> array('module' => 'forums'), 						// Built-in forum link
-			'NewsLabel'			=> array('module' => 'news'),
+			'ข่าวสาร'			=> array('module' => 'news'),
 			// Sample items for pages function.
-			'DownloadsLabel'		=> array('module' => 'pages','action'=>'content&path=downloads'),
-			'RulesLabel'			=> array('module' => 'pages','action'=>'content&path=rules'),
+			'ดาวน์โหลดเกม'		=> array('module' => 'pages','action'=>'content&path=downloads'),
+			'กฏกติกา'			=> array('module' => 'pages','action'=>'content&path=rules'),
 			// End sample items for pages function.
 		),
 		'AccountLabel'		=> array(
-			'AccountCreateHeading'		=> array('module' => 'account', 'action' => 'create'),
-			'LoginTitle'			=> array('module' => 'account', 'action' => 'login'),
-			'MyAccountLabel'	=> array('module' => 'account', 'action' => 'view'),
-			'HistoryLabel'		=> array('module' => 'history'),
-			'ServiceDeskLabel'	=> array('module' => 'servicedesk'),
-			'LogoutTitle'		=> array('module' => 'account', 'action' => 'logout'),
+			'สร้างบัญชีผู้ใช้'		=> array('module' => 'account', 'action' => 'create'),
+			'ระบบสมาชิก'			=> array('module' => 'account', 'action' => 'login'),
+			'ข้อมูลส่วนตัว'	=> array('module' => 'account', 'action' => 'view'),
+			'ประวัติส่วนตัว'		=> array('module' => 'history'),
+			//'ServiceDeskLabel'	=> array('module' => 'servicedesk'),
+			'ออกจากระบบ'		=> array('module' => 'account', 'action' => 'logout'),
 		),
 		'DonationsLabel'		=> array(
-			'PurchaseLabel'		=> array('module' => 'purchase'),
-			'DonateLabel'		=> array('module' => 'donate'),
+			//'PurchaseLabel'		=> array('module' => 'purchase'),
+			'เติมเงิน'		=> array('module' => 'donate'),
 		),
 		'InformationLabel'	=> array(
-			'ServerInfoLabel'	=> array('module' => 'server', 'action' => 'info'),
-			'ServerStatusLabel'	=> array('module' => 'server', 'action' => 'status'),
-			'WoeHoursLabel'		=> array('module' => 'woe'),
-			'CastlesLabel'		=> array('module' => 'castle'),
-			'WhosOnlineLabel'	=> array('module' => 'character', 'action' => 'online'),
-			'MapStaticsLabel'=> array('module' => 'character', 'action' => 'mapstats'),
-			'RankingInfoLabel'	=> array('module' => 'ranking', 'action' => 'character'),
-			'VendingInfoLabel'	=> array('module' => 'vending'),
-			'BuyingstoreInfoLabel'	=> array('module' => 'buyingstore'),
+			'ข้อมูลเซิฟเวอร์'	=> array('module' => 'server', 'action' => 'info'),
+			'สถานะเซิฟเวอร์'	=> array('module' => 'server', 'action' => 'status'),
+			'ข้อมูลกิลด์วอร์'		=> array('module' => 'woe'),
+			'ปราสาทกิลด์วอร์'		=> array('module' => 'castle'),
+			'ตัวละครออนไลน์'	=> array('module' => 'character', 'action' => 'online'),
+			//'MapStaticsLabel'=> array('module' => 'character', 'action' => 'mapstats'),
+			'อันดับในเซิฟเวอร์'	=> array('module' => 'ranking', 'action' => 'character'),
+			//'VendingInfoLabel'	=> array('module' => 'vending'),
+			//'BuyingstoreInfoLabel'	=> array('module' => 'buyingstore'),
 		),
 		'DatabaseLabel'		=> array(
-			'ItemDatabaseLabel'	=> array('module' => 'item'),
-			'MobDatabaseLabel'	=> array('module' => 'monster'),
+			'ค้นหาไอเทม'	=> array('module' => 'item'),
+			'ค้นหามอนเตอร์'	=> array('module' => 'monster'),
 		),
 		'SocialLabel'		=> array(
-			'JoinUsInFacebookLabel'	=> array('exturl' => 'https://www.facebook.com/<change_me>'),
-			'RateUsOnRMSLabel'		=> array('exturl' => '<link_to_RMS>'),
+			'Facebook'	=> array('exturl' => 'https://www.facebook.com/'),
+			//'RateUsOnRMSLabel'		=> array('exturl' => '<link_to_RMS>'),
 		),
 		'Service Desk'	=> array(
-			'ServiceDeskLabel'	=> array('module' => 'servicedesk', 'action' => 'staffindex'),
+			//'ServiceDeskLabel'	=> array('module' => 'servicedesk', 'action' => 'staffindex'),
 		),
 		'Misc. Stuff'	=> array(
-			'AccountLabel'		=> array('module' => 'account'),
-			'CharacterLabel'	=> array('module' => 'character'),
-			'CPLogsLabel'		=> array('module' => 'cplog'),
-			'PagesLabel'		=> array('module' => 'pages'),
-			'NewsLabel'			=> array('module' => 'news', 'action' => 'manage'),
-			'GuildsLabel'		=> array('module' => 'guild'),
-			'IPBanListLabel'	=> array('module' => 'ipban'),
-			'rALogsLabel'		=> array('module' => 'logdata'),
-			'ReInstallLabel'	=> array('module' => 'install', 'action' => 'reinstall'),
-			'SendMailLabel'		=> array('module' => 'mail'),
-			'WCTitleLabel'		=> array('module' => 'webcommands'),
-			'Cash Shop'			=> array('module' => 'cashshop'),
+			'ข้อมูลส่วนตัว'		=> array('module' => 'account'),
+			'ข้อมูลตัวละคร'	=> array('module' => 'character'),
+			//'CPLogsLabel'		=> array('module' => 'cplog'),
+			//'PagesLabel'		=> array('module' => 'pages'),
+			//'NewsLabel'			=> array('module' => 'news', 'action' => 'manage'),
+			//'GuildsLabel'		=> array('module' => 'guild'),
+			'BanIP'	=> array('module' => 'ipban'),
+			//'rALogsLabel'		=> array('module' => 'logdata'),
+			//'ReInstallLabel'	=> array('module' => 'install', 'action' => 'reinstall'),
+			//'SendMailLabel'		=> array('module' => 'mail'),
+			//'WCTitleLabel'		=> array('module' => 'webcommands'),
+			//'Cash Shop'			=> array('module' => 'cashshop'),
 			//'Auction'		=> array('module' => 'auction'),
 			//'Economy'		=> array('module' => 'economy')
 		)
@@ -297,26 +297,26 @@ return array(
 		'history'		=> array(
 			'gamelogin'		=> 'Game Logins',
 			'cplogin'		=> 'CP Logins',
-			'emailchange'	=> 'E-Mail Changes',
-			'passchange'	=> 'Password Changes',
-			'passreset'		=> 'Password Resets'
+			'emailchange'	=> 'เปลี่ยนอีเมล์',
+			'passchange'	=> 'เปลี่ยนรหัสผ่าน',
+			'passreset'		=> 'รีเซ็ตรหัสผ่าน'
 		),
 		'account'		=> array(
 			'index'			=> 'List Accounts',
 			'view'			=> 'View Account',
-			'changepass'	=> 'Change Password',
-			'changemail'	=> 'Change E-mail',
-			'changesex'		=> 'Change Gender',
-			'transfer'		=> 'Transfer Credits',
-			'xferlog'		=> 'Credit Transfer History',
-			'cart'			=> 'Go to Shopping Cart',
-			'login'			=> 'Login',
-			'create'		=> 'Register',
-			'resetpass'		=> 'Reset Password',
-			'resend'		=> 'Resend E-mail Confirmation'
+			'changepass'	=> 'เปลี่ยนรหัสผ่าน',
+			'changemail'	=> 'เปลี่ยนอีเมล์',
+			'changesex'		=> 'เปลี่ยนเพศ',
+			//'transfer'		=> 'Transfer Credits',
+			//'xferlog'		=> 'Credit Transfer History',
+			//'cart'			=> 'Go to Shopping Cart',
+			'login'			=> 'เข้าสู่ระบบ',
+			'create'		=> 'สมัครสมาชิก',
+			'resetpass'		=> 'รีเซ็ตรหัสผ่าน',
+			'resend'		=> 'ส่งอีเมล์เพื่อยืนยัน'
 		),
 		'guild'			=> array(
-			'index'			=> 'List Guilds',
+			'index'			=> 'รายชื่อกิลด์',
 			'export'		=> 'Export Guild Emblems'
 		),
 		'server'		=> array(
@@ -360,23 +360,23 @@ return array(
 			'trusted'		=> 'Trusted PayPal E-mails'
 		),
 		'ipban'			=> array(
-			'index'			=> 'IP Ban List',
-			'add'			=> 'Add IP Ban'
+			'index'			=> 'รายการ BanIP',
+			'add'			=> 'เพิ่ม BanIP'
 		),
 		'ranking'		=> array(
-			'character'		=> 'Characters',
-			'death'			=> 'Deaths',
-			'alchemist'		=> 'Alchemists',
-			'blacksmith'	=> 'Blacksmiths',
-			'homunculus'	=> 'Homunculus',
+			'character'		=> 'ตัวละคร',
+			'death'			=> 'ตาย',
+			'alchemist'		=> 'อาเชอร์มิส',
+			'blacksmith'	=> 'พ่อค้า',
+			'homunculus'	=> 'โฮมุนคูส',
 			'mvp'			=> 'MVPs',
-			'guild'			=> 'Guilds',
-			'zeny'			=> 'Zeny'
+			'guild'			=> 'กิลด์',
+			'zeny'			=> 'เงิน'
 		),
 		'item'			=> array(
-			'index'			=> 'List Items',
-			'add'			=> 'Add Item',
-			'iteminfo'		=> 'Add Item Info',
+			'index'			=> 'รายการไอเทม',
+			'add'			=> 'เพิ่มไอเทม',
+			//'iteminfo'		=> 'เพิ่มคำอธิบายไอเทม',
 		),
 		'pages'			=> array(
 			'index'			=> 'Manage Pages',

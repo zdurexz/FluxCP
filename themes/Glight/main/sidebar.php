@@ -30,7 +30,7 @@ $menuItems = $this->getMenuItems();
 <?php foreach ($adminMenuItems as $menuItem): ?>
     <li><a href="<?php echo $this->url($menuItem['module'], $menuItem['action']) ?>"<?php
 				if ($menuItem['module'] == 'account' && $menuItem['action'] == 'logout')
-					echo ' onclick="return confirm(\'Are you sure you want to logout?\')"' ?>>
+					echo ' onclick="return confirm(\'คุณต้องการที่จะออกจากระบบ?\')"' ?>>
 				<span><?php echo htmlspecialchars($menuItem['name']) ?></span>
 			</a></li>
 <?php endforeach ?>

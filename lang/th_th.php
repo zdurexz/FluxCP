@@ -1,6 +1,7 @@
 <?php
 return array(	
 	// Generic/Misc.
+	'Language'                => 'ไทย',
 	'YesLabel'                => 'ใช่',
 	'NoLabel'                 => 'ไม่',
 	'NoteLabel'               => 'หมายเหตุ',
@@ -632,11 +633,11 @@ return array(
 	'ServerInfoText'          => "ที่นี่คุณจะพบข้อมูลเซิร์ฟเวอร์ต่างๆ",
 	'ServerInfoSubHeading'    => 'ข้อมูลสำหรับเซิร์ฟเวอร์ %s',
 	'ServerInfoSubHeading2'   => 'ข้อมูลอาชีพสำหรับเซิร์ฟเวอร์ %s',
-	'ServerInfoAccountLabel'  => 'Accounts',
-	'ServerInfoCharLabel'     => 'Characters',
-	'ServerInfoGuildLabel'    => 'Guilds',
-	'ServerInfoPartyLabel'    => 'Parties',
-	'ServerInfoZenyLabel'     => 'Zeny',
+	'ServerInfoAccountLabel'  => 'บัญชีผู้ใช้',
+	'ServerInfoCharLabel'     => 'ตัวละคร',
+	'ServerInfoGuildLabel'    => 'กิลด์',
+	'ServerInfoPartyLabel'    => 'ปาร์ตี้',
+	'ServerInfoZenyLabel'     => 'เงิน',
 	// - server/status
 	'ServerStatusTitle'       => 'สถานะเซิร์ฟเวอร์ปัจจุบัน',
 	'ServerStatusHeading'     => 'สถานะของเซิร์ฟเวอร์',

@@ -122,8 +122,8 @@
 			<option value="no"<?php if ($custom == 'no') echo ' selected="selected"' ?>>ไม่</option>
 		</select>
 		
-		<input type="submit" value="Search" class="btn"/>
-		<input type="button" value="Reset" onclick="reload()" class="btn" />
+		<input type="submit" value="ค้นหา" class="btn"/>
+		<input type="button" value="รีเซ็ต" onclick="reload()" class="btn" />
 	</p>
 </form>
 <?php if ($items): ?>
@@ -143,7 +143,7 @@
 		<th><?php echo $paginator->sortableColumn('slots', 'ช่องการ์ด') ?></th>
 		<th><?php echo $paginator->sortableColumn('refineable', 'การตีบวก') ?></th>
 		<th><?php echo $paginator->sortableColumn('cost', 'ร้านแคช') ?></th>
-		<th><?php echo $paginator->sortableColumn('origin_table', 'ปรับแก้') ?></th>
+		<th><?php echo $paginator->sortableColumn('origin_table', 'เพิ่มเติม') ?></th>
 	</tr>
 	<?php foreach ($items as $item): ?>
 	<tr>
@@ -183,23 +183,23 @@
 		<td><?php echo number_format((int)$item->slots) ?></td>
 		<td>
 			<?php if ($item->refineable): ?>
-				<span class="refineable yes">Yes</span>
+				<span class="refineable yes">ได้</span>
 			<?php else: ?>
-				<span class="refineable no">No</span>
+				<span class="refineable no">ไม่ได้</span>
 			<?php endif ?>
 		</td>
 		<td>
 			<?php if ($item->cost): ?>
-				<span class="for-sale yes"><a href="<?php echo $this->url('purchase') ?>" title="Go to Item Shop">Yes</a></span>
+				<span class="for-sale yes"><a href="<?php echo $this->url('purchase') ?>" title="Go to Item Shop">มี</a></span>
 			<?php else: ?>
-				<span class="for-sale no">No</span>
+				<span class="for-sale no">ไม่มี</span>
 			<?php endif ?>
 		</td>
 		<td>
 			<?php if (preg_match('/item_db2$/', $item->origin_table)): ?>
-				Yes
+				ใช่
 			<?php else: ?>
-				No
+				ไม่
 			<?php endif ?>
 		</td>
 	</tr>
@@ -209,5 +209,5 @@
 <?php echo $paginator->getHTML() ?>
 </div>
 <?php else: ?>
-<p>No items found. <a href="javascript:history.go(-1)">Go back</a>.</p>
+<p>ไม่พบไอเทมดังกล่าว. <a href="javascript:history.go(-1)">ย้อนกลับ</a>.</p>
 <?php endif ?>

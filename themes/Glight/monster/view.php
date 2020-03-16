@@ -1,5 +1,5 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Viewing Monster</h2>
+<h2>ข้อมูลมอนเตอร์</h2>
 <?php if ($monster): ?>
 <h3>
 	#<?php echo $monster->monster_id ?>: <?php echo htmlspecialchars($monster->iro_name) ?>
@@ -9,18 +9,18 @@
 </h3>
 <table class="vertical-table">
 	<tr>
-		<th>Monster ID</th>
+		<th>รหัสมอนเตอร์</th>
 		<td><?php echo $monster->monster_id ?></td>
-		<th>Sprite</th>
+		<th>ชื่อมอนเตอร์</th>
 		<td><?php echo htmlspecialchars($monster->sprite) ?></td>
 		<?php if ($itemDrops): ?>
 		<td rowspan="13" style="vertical-align: top">
-			<h3><?php echo htmlspecialchars($monster->iro_name) ?> Item Drops</h3>
+			<h3><?php echo htmlspecialchars($monster->iro_name) ?> ไอเทมดรอป</h3>
 			<table class="vertical-table">
 				<tr>
-					<th>Item ID</th>
-					<th colspan="2">Item Name</th>
-					<th>Drop Chance</th>
+					<th>รหัสไอเทม</th>
+					<th colspan="2">ชื่อไอเทม</th>
+					<th>โอกาสตก</th>
 				</tr>
 				<?php $mvpDrops = 0; ?>
 				<?php foreach ($itemDrops as $itemDrop): ?>
@@ -66,19 +66,19 @@
 		<?php endif ?>
 	</tr>
 	<tr>
-		<th>kRO Name</th>
+		<th>ชื่อมอนเตอร์</th>
 		<td><?php echo htmlspecialchars($monster->kro_name) ?></td>
-		<th>HP</th>
+		<th>เลือด</th>
 		<td><?php echo number_format($monster->hp) ?></td>
 	</tr>
 	<tr>
-		<th>iRO Name</th>
+		<th>ชื่อมอนเตอร์</th>
 		<td><?php echo htmlspecialchars($monster->iro_name) ?></td>
-		<th>SP</th>
+		<th>มานา</th>
 		<td><?php echo number_format($monster->sp) ?></td>
 	</tr>
 	<tr>
-		<th>Race</th>
+		<th>ประเภท</th>
 		<td>
 			<?php if ($race=Flux::monsterRaceName($monster->race)): ?>
 				<?php echo htmlspecialchars($race) ?>
@@ -86,53 +86,53 @@
 				<span class="not-applicable">Unknown</span>
 			<?php endif ?>	
 		</td>
-		<th>Level</th>
+		<th>เลเวล</th>
 		<td><?php echo number_format($monster->level) ?></td>
 	</tr>
 	<tr>
-		<th>Element</th>
+		<th>ธาตุ</th>
 		<td><?php echo Flux::elementName($monster->element_type) ?> (Level <?php echo floor($monster->element_level) ?>)</td>
-		<th>Speed</th>
+		<th>ความเร็ว</th>
 		<td><?php echo number_format($monster->speed) ?></td>
 	</tr>
 	<tr>
-		<th>Experience</th>
+		<th>ค่าประสบการณ์ Base</th>
 		<td><?php echo number_format($monster->base_exp*$server->baseExpRates) ?></td>
-		<th>Attack</th>
+		<th>พลังโจมตี</th>
 		<td><?php echo number_format($monster->attack1) ?>~<?php echo number_format($monster->attack2) ?></td>
 	</tr>
 	<tr>
-		<th>Job Experience</th>
+		<th>ค่าประสบการณ์ Job</th>
 		<td><?php echo number_format($monster->job_exp*$server->jobExpRates) ?></td>
-		<th>Defense</th>
+		<th>พลังป้องกัน</th>
 		<td><?php echo number_format($monster->defense) ?></td>
 	</tr>
 	<tr>
-		<th>MVP Experience</th>
+		<th>ค่าประสบการณ์ MVP</th>
 		<td><?php echo number_format($monster->mvp_exp*$server->mvpExpRates) ?></td>
-		<th>Magic Defense</th>
+		<th>พลังป้องกันเวทย์</th>
 		<td><?php echo number_format($monster->magic_defense) ?></td>
 	</tr>
 	<tr>
-		<th>Attack Delay</th>
+		<th>อัตตราการโจมตี</th>
 		<td><?php echo number_format($monster->attack_delay) ?> ms</td>
-		<th>Attack Range</th>
+		<th>ระยะโจมตี</th>
 		<td><?php echo number_format($monster->range1) ?></td>
 	</tr>
 	<tr>
-		<th>Attack Motion</th>
+		<th>ระยะเวลาท่าทางโจมตี</th>
 		<td><?php echo number_format($monster->attack_motion) ?> ms</td>
-		<th>Spell Range</th>
+		<th>ระยะห่างร่ายเวทย์</th>
 		<td><?php echo number_format($monster->range2) ?></td>
 	</tr>
 	<tr>
-		<th>Delay Motion</th>
+		<th>ระยะเวลาท่าทาง</th>
 		<td><?php echo number_format($monster->defense_motion) ?> ms</td>
-		<th>Vision Range</th>
+		<th>ระยะมองเห็น</th>
 		<td><?php echo number_format($monster->range3) ?></td>
 	</tr>
 	<tr>
-		<th>Monster Mode</th>
+		<th>การทำงานของมอนสเตอร์</th>
 		<td colspan="3">
 			<ul class="monster-mode">
 			<?php foreach ($this->monsterMode($monster->mode) as $mode): ?>
@@ -142,7 +142,7 @@
 		</td>
 	</tr>
 	<tr>
-		<th>Monster Stats</th>
+		<th>สเตตัสมอนสเตอร์</th>
 		<td colspan="3">
 			<table class="character-stats">
 				<tr>
@@ -166,24 +166,24 @@
 	</tr>
 </table>
 
-<h3>Monster Skills for “<?php echo htmlspecialchars($monster->iro_name) ?>”</h3>
+<h3>สกิลที่ “<?php echo htmlspecialchars($monster->iro_name) ?>” ใช้งาน</h3>
 <?php if (!file_exists($skillDB) || !filesize($skillDB)): ?>
 <p><strong>Mob skill database needs to be reloaded!</strong></p>
 <?php elseif (empty($mobSkills)): ?>
-<p>No skills found for <?php echo htmlspecialchars($monster->iro_name) ?>.</p>
+<p>ไม่พบสกิลของ <?php echo htmlspecialchars($monster->iro_name) ?>.</p>
 <?php else: ?>
 <table class="vertical-table">
 	<tr>
-		<th>Name</th>
-		<th>Level</th>
-		<th>State</th>
-		<th>Rate</th>
-		<th>Cast Time</th>
-		<th>Delay</th>
-		<th>Cancelable</th>
-		<th>Target</th>
-		<th>Condition</th>
-		<th>Value</th>
+		<th>ชื่อสกิล</th>
+		<th>เลเวลสกิล</th>
+		<th>ใช้เมื่อ</th>
+		<th>โอนกาสใช้</th>
+		<th>ระยะเวลาร่าย</th>
+		<th>ดีเลย์</th>
+		<th>การถูกขัดขวาง</th>
+		<th>เป้าหมาย</th>
+		<th>เงื่อนไข</th>
+		<th>ค่า</th>
 	</tr>	
 	<?php foreach ($mobSkills as $skill): ?>
 	<tr>
@@ -200,7 +200,7 @@
 			<?php if (!is_null($skill['value']) && trim($skill['value']) !== ''): ?>
 				<?php echo htmlspecialchars($skill['value']) ?>
 			<?php else: ?>
-				<span class="not-applicable">None</span>
+				<span class="not-applicable">ไม่มี</span>
 			<?php endif ?>
 		</td>
 	</tr>
@@ -208,5 +208,5 @@
 </table>
 <?php endif ?>
 <?php else: ?>
-<p>No such monster was found. <a href="javascript:history.go(-1)">Go back</a>.</p>
+<p>ไม่พบสกิลมอนเตอร์. <a href="javascript:history.go(-1)">ย้อนกลับ</a>.</p>
 <?php endif ?>

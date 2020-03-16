@@ -9,7 +9,7 @@ return array(
 															// WARNING: This will be mostly IGNORED on non-POSIX-compliant OSes (e.g. Windows).
 	'DefaultLoginGroup'			=> null,
 	'DefaultCharMapServer'		=> null,
-	'DefaultLanguage'			=> 'en_th',					// Specify the default control panel language (see FLUX_ROOT/lang/ directory for available languages.)
+	'DefaultLanguage'			=> 'th_th',					// Specify the default control panel language (see FLUX_ROOT/lang/ directory for available languages.)
 	'SiteTitle'					=> 'Flux Control Panel',	// This value is only used if the theme decides to use it.
 	'ThemeName'					=> array('Glight'), // Names of the themes you would like list for use in the footer. Themes are in FLUX_ROOT/themes.
 	'ScriptTimeLimit'			=> 0,						// Script execution time limit. Specifies (in seconds) how long a page should run before timing out. (0 means forever)
@@ -295,15 +295,15 @@ return array(
 	// particular module. The format it simple.
 	'SubMenuItems'	=> array(
 		'history'		=> array(
-			'gamelogin'		=> 'Game Logins',
-			'cplogin'		=> 'CP Logins',
+			//'gamelogin'		=> 'Game Logins',
+			'cplogin'		=> 'ประวัติเข้าเกม',
 			'emailchange'	=> 'เปลี่ยนอีเมล์',
 			'passchange'	=> 'เปลี่ยนรหัสผ่าน',
 			'passreset'		=> 'รีเซ็ตรหัสผ่าน'
 		),
 		'account'		=> array(
-			'index'			=> 'List Accounts',
-			'view'			=> 'View Account',
+			'index'			=> 'ไอดีทั้งหมด',
+			'view'			=> 'ข้อมูลส่วนตัว',
 			'changepass'	=> 'เปลี่ยนรหัสผ่าน',
 			'changemail'	=> 'เปลี่ยนอีเมล์',
 			'changesex'		=> 'เปลี่ยนเพศ',

@@ -1,49 +1,49 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Monsters</h2>
-<p class="toggler"><a href="javascript:toggleSearchForm()">Search...</a></p>
+<h2>ข้อมูลมอนเตอร์</h2>
+<p class="toggler"><a href="javascript:toggleSearchForm()">ค้นหามอนเตอร์...</a></p>
 <form class="search-form" method="get">
 	<?php echo $this->moduleActionFormInputs($params->get('module')) ?>
 	<p>
-		<label for="monster_id">Monster ID:</label>
+		<label for="monster_id">รหัสมอนเตอร์:</label>
 		<input type="text" name="monster_id" id="monster_id" value="<?php echo htmlspecialchars($params->get('monster_id')) ?>" />
 		...
-		<label for="name">Name:</label>
+		<label for="name">ชื่อมอนเตอร์:</label>
 		<input type="text" name="name" id="name" value="<?php echo htmlspecialchars($params->get('name')) ?>" />
 		...
-		<label for="card_id">Card ID:</label>
+		<label for="card_id">รหัสการ์ด:</label>
 		<input type="text" name="card_id" id="card_id" value="<?php echo htmlspecialchars($params->get('card_id')) ?>" />
 		...
 		<label for="mvp">MVP:</label>
 		<select name="mvp" id="mvp">
-			<option value="all"<?php if (!($mvpParam=strtolower($params->get('mvp'))) || $mvpParam == 'all') echo ' selected="selected"' ?>>All</option>
-			<option value="yes"<?php if ($mvpParam == 'yes') echo ' selected="selected"' ?>>Yes</option>
-			<option value="no"<?php if ($mvpParam == 'no') echo ' selected="selected"' ?>>No</option>
+			<option value="all"<?php if (!($mvpParam=strtolower($params->get('mvp'))) || $mvpParam == 'all') echo ' selected="selected"' ?>>ทั้งหมด</option>
+			<option value="yes"<?php if ($mvpParam == 'yes') echo ' selected="selected"' ?>>ใช่</option>
+			<option value="no"<?php if ($mvpParam == 'no') echo ' selected="selected"' ?>>ไม่ใช่</option>
 		</select>
 		...
-		<label for="custom">Custom:</label>
+		<label for="custom">เพิ่มเติม:</label>
 		<select name="custom" id="custom">
-			<option value=""<?php if (!($custom=$params->get('custom'))) echo ' selected="selected"' ?>>All</option>
-			<option value="yes"<?php if ($custom == 'yes') echo ' selected="selected"' ?>>Yes</option>
-			<option value="no"<?php if ($custom == 'no') echo ' selected="selected"' ?>>No</option>
+			<option value=""<?php if (!($custom=$params->get('custom'))) echo ' selected="selected"' ?>>ทั้งหมด</option>
+			<option value="yes"<?php if ($custom == 'yes') echo ' selected="selected"' ?>>ใช่</option>
+			<option value="no"<?php if ($custom == 'no') echo ' selected="selected"' ?>>ไม่</option>
 		</select>
 		
-		<input type="submit" value="Search" class="btn"/>
-		<input type="button" value="Reset" onclick="reload()" class="btn"/>
+		<input type="submit" value="ค้นหา" class="btn"/>
+		<input type="button" value="รีเซ็ต" onclick="reload()" class="btn"/>
 	</p>
 </form>
 <?php if ($monsters): ?>
 <?php echo $paginator->infoText() ?>
 <table class="horizontal-table">
 	<tr>
-		<th><?php echo $paginator->sortableColumn('monster_id', 'Monster ID') ?></th>
-		<th><?php echo $paginator->sortableColumn('kro_name', 'kRO Name') ?></th>
-		<th><?php echo $paginator->sortableColumn('iro_name', 'iRO Name') ?></th>
-		<th><?php echo $paginator->sortableColumn('level', 'Level') ?></th>
-		<th><?php echo $paginator->sortableColumn('hp', 'HP') ?></th>
-		<th><?php echo $paginator->sortableColumn('exp', 'Base EXP') ?></th>
-		<th><?php echo $paginator->sortableColumn('jexp', 'Job EXP') ?></th>
-		<th><?php echo $paginator->sortableColumn('dropcard_id', 'Card ID') ?></th>
-		<th><?php echo $paginator->sortableColumn('origin_table', 'Custom') ?></th>
+		<th><?php echo $paginator->sortableColumn('monster_id', 'รหัสมอนเตอร์') ?></th>
+		<th><?php echo $paginator->sortableColumn('kro_name', 'ชื่อมอนเตอร์') ?></th>
+		<th><?php echo $paginator->sortableColumn('iro_name', 'ชื่อมอนเตอร์') ?></th>
+		<th><?php echo $paginator->sortableColumn('level', 'เลเวล') ?></th>
+		<th><?php echo $paginator->sortableColumn('hp', 'เลือด') ?></th>
+		<th><?php echo $paginator->sortableColumn('exp', 'ประสบการณ์ Base') ?></th>
+		<th><?php echo $paginator->sortableColumn('jexp', 'ประสบการณ์ Job') ?></th>
+		<th><?php echo $paginator->sortableColumn('dropcard_id', 'รหัสการ์ด') ?></th>
+		<th><?php echo $paginator->sortableColumn('origin_table', 'เพิ่มเติม') ?></th>
 	</tr>
 	<?php foreach ($monsters as $monster): ?>
 	<tr>
@@ -74,13 +74,13 @@
 				<?php endif ?>
 			</td>
 		<?php else: ?>
-			<td><span class="not-applicable">None</span></td>
+			<td><span class="not-applicable">ไม่มี</span></td>
 		<?php endif ?>
 		<td>
 			<?php if (preg_match('/mob_db2$/', $monster->origin_table)): ?>
-				Yes
+				ใช่
 			<?php else: ?>
-				No
+				ไม่ใช่
 			<?php endif ?>
 		</td>
 	</tr>
@@ -88,5 +88,5 @@
 </table>
 <?php echo $paginator->getHTML() ?>
 <?php else: ?>
-<p>No monsters found. <a href="javascript:history.go(-1)">Go back</a>.</p>
+<p>ไม่พบมอนเตอร์ดังกล่าว <a href="javascript:history.go(-1)">ย้อนกลับ</a>.</p>
 <?php endif ?>

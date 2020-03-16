@@ -1223,10 +1223,10 @@ class Flux_Template {
 		}
 		
 		if (count($jobs) === count($equipJobs)) {
-			return array('All Jobs');
+			return array('ทุกอาชีพ');
 		}
 		else if (count($jobs) === count($equipJobs) - 1 && !in_array($equipJobs, $jobs)) {
-			return array('All Jobs Except Novice');
+			return array('ทุกอาชีพยกเว้น Novice');
 		}
 		else {
 			return $jobs;

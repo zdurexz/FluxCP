@@ -237,7 +237,7 @@
 		</tr>
 		<?php endforeach ?>
 		</table>
-		<p>Total Zeny: <strong><?php echo number_format($zeny) ?></strong></p>
+		<p>เงินทั้งหมด : <strong><?php echo number_format($zeny) ?></strong></p>
 	<?php else: ?>
 	<p><?php echo htmlspecialchars(sprintf(Flux::message('AccountViewNoChars'), $serverName)) ?></p>
 	<?php endif ?>

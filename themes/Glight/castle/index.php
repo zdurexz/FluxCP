@@ -1,12 +1,12 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Castles</h2>
-<p>This page shows what castles are activated and which guilds own them.</p>
+<h2>บ้านกิลด์</h2>
+<p>โชว์ข้อมูลบ้านกิลด์และบ้านกิลด์ที่ถูกกิลด์ครอบครอง</p>
 <?php if ($castles): ?>
 <table class="vertical-table">
 	<tr>
-		<th>Castle ID</th>
-		<th>Castle</th>
-		<th colspan="2">Guild</th>
+		<th>รหัสบ้านกิลด์</th>
+		<th>ชื่อบ้านกิลด์</th>
+		<th colspan="2">ชื่อกิลด์</th>
 	</tr>
 	<?php foreach ($castles as $castle): ?>
 		<tr>
@@ -15,7 +15,7 @@
 				<?php if (array_key_exists($castle->castle_id, $castleNames) && $castleNames[$castle->castle_id]): ?>
 					<?php echo htmlspecialchars($castleNames[$castle->castle_id]) ?>
 				<?php else: ?>
-					<span class="not-applicable">Unknown<?php echo " (".$castle->castle_id.")" ?></span>
+					<span class="not-applicable">ไม่รู้จัก<?php echo " (".$castle->castle_id.")" ?></span>
 				<?php endif ?>
 			</td>
 			<?php if ($castle->guild_name): ?>
@@ -38,5 +38,5 @@
 	<?php endforeach ?>
 </table>
 <?php else: ?>
-<p>No castles found. <a href="javascript:history.go(-1)">Go back</a>.</p>
+<p>ไม่พบข้อมูลบ้านกิลด์. <a href="javascript:history.go(-1)">ย้อนกลับ</a>.</p>
 <?php endif ?>

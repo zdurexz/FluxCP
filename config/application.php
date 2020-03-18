@@ -10,7 +10,7 @@ return array(
 	'DefaultLoginGroup'			=> null,
 	'DefaultCharMapServer'		=> null,
 	'DefaultLanguage'			=> 'en_us',					// Specify the default control panel language (see FLUX_ROOT/lang/ directory for available languages.)
-	'SiteTitle'					=> 'Flux Control Panel',	// This value is only used if the theme decides to use it.
+	'SiteTitle'					=> 'ServerName',	// This value is only used if the theme decides to use it.
 	'ThemeName'					=> array('Glight'), // Names of the themes you would like list for use in the footer. Themes are in FLUX_ROOT/themes.
 	'ScriptTimeLimit'			=> 0,						// Script execution time limit. Specifies (in seconds) how long a page should run before timing out. (0 means forever)
 	'MissingEmblemBMP'			=> 'empty.bmp',				//
@@ -243,7 +243,7 @@ return array(
 			'สร้างบัญชีผู้ใช้'		=> array('module' => 'account', 'action' => 'create'),
 			'ระบบสมาชิก'			=> array('module' => 'account', 'action' => 'login'),
 			'ข้อมูลส่วนตัว'	=> array('module' => 'account', 'action' => 'view'),
-			'ประวัติส่วนตัว'		=> array('module' => 'history'),
+			'ประวัติการแก้ไข'		=> array('module' => 'history'),
 			//'ServiceDeskLabel'	=> array('module' => 'servicedesk'),
 			'ออกจากระบบ'		=> array('module' => 'account', 'action' => 'logout'),
 		),
@@ -252,13 +252,13 @@ return array(
 			'เติมเงิน'		=> array('module' => 'donate'),
 		),
 		'InformationLabel'	=> array(
-			'ข้อมูลเซิฟเวอร์'	=> array('module' => 'server', 'action' => 'info'),
-			'สถานะเซิฟเวอร์'	=> array('module' => 'server', 'action' => 'status'),
+			'ข้อมูลเซิร์ฟเวอร์'	=> array('module' => 'server', 'action' => 'info'),
+			'สถานะเซิร์ฟเวอร์'	=> array('module' => 'server', 'action' => 'status'),
 			'ข้อมูลกิลด์วอร์'		=> array('module' => 'woe'),
-			'ปราสาทกิลด์วอร์'		=> array('module' => 'castle'),
+			'บ้านกิลด์วอร์'		=> array('module' => 'castle'),
 			'ตัวละครออนไลน์'	=> array('module' => 'character', 'action' => 'online'),
 			//'MapStaticsLabel'=> array('module' => 'character', 'action' => 'mapstats'),
-			'อันดับในเซิฟเวอร์'	=> array('module' => 'ranking', 'action' => 'character'),
+			'อันดับในเซิร์ฟเวอร์'	=> array('module' => 'ranking', 'action' => 'character'),
 			//'VendingInfoLabel'	=> array('module' => 'vending'),
 			//'BuyingstoreInfoLabel'	=> array('module' => 'buyingstore'),
 		),
@@ -267,7 +267,8 @@ return array(
 			'ค้นหามอนเตอร์'	=> array('module' => 'monster'),
 		),
 		'SocialLabel'		=> array(
-			'Facebook'	=> array('exturl' => 'https://www.facebook.com/'),
+			'Facebook'	=> array('exturl' => 'https://www.facebook.com/durexzstudio/'),
+			'Discord'	=> array('exturl' => 'https://discord.gg/nat6MFu'),
 			//'RateUsOnRMSLabel'		=> array('exturl' => '<link_to_RMS>'),
 		),
 		'Service Desk'	=> array(
@@ -320,8 +321,8 @@ return array(
 			'export'		=> 'Export Guild Emblems'
 		),
 		'server'		=> array(
-			'status'		=> 'View Status',
-			'status-xml'	=> 'View Status as XML'
+			'status'		=> 'สถานะของเซิร์ฟเวอร์',
+			//'status-xml'	=> 'View Status as XML'
 		),
 		'logdata'		=> array(
 			'branch'		=> 'Branches',
@@ -366,17 +367,17 @@ return array(
 		'ranking'		=> array(
 			'character'		=> 'ตัวละคร',
 			'death'			=> 'ตาย',
-			'alchemist'		=> 'อาเชอร์มิส',
-			'blacksmith'	=> 'พ่อค้า',
-			'homunculus'	=> 'โฮมุนคูส',
-			'mvp'			=> 'MVPs',
+			//'alchemist'		=> 'อาเชอร์มิส',
+			//'blacksmith'	=> 'พ่อค้า',
+			//'homunculus'	=> 'โฮมุนคูส',
+			//'mvp'			=> 'MVPs',
 			'guild'			=> 'กิลด์',
 			'zeny'			=> 'เงิน'
 		),
 		'item'			=> array(
 			'index'			=> 'รายการไอเทม',
 			'add'			=> 'เพิ่มไอเทม',
-			//'iteminfo'		=> 'เพิ่มคำอธิบายไอเทม',
+			'iteminfo'		=> 'เพิ่มคำอธิบายไอเทม',
 		),
 		'pages'			=> array(
 			'index'			=> 'Manage Pages',

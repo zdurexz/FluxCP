@@ -18,7 +18,7 @@ final class AccountLevel {
  * 		),
  */
 		0 => array(
-			'name'  => "ผู้เล่น",
+			'name'  => "Player",
 			'level' => AccountLevel::NORMAL
 		),
 		1 => array(
@@ -38,7 +38,7 @@ final class AccountLevel {
 			'level' => AccountLevel::LOWGM
 		),
 		5 => array(
-			'name'  => "วีไอพี",
+			'name'  => "VIP",
 			'level' => AccountLevel::NORMAL
 		),
 		10 => array(
@@ -46,7 +46,7 @@ final class AccountLevel {
 			'level' => AccountLevel::HIGHGM
 		),
 		99 => array(
-			'name'  => "แอดมิน",
+			'name'  => "Admin",
 			'level' => AccountLevel::ADMIN
 		)
 	);

@@ -1,19 +1,19 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Guild Ranking</h2>
+<h2>อันดับกิลด์</h2>
 <h3>
-	Top <?php echo number_format($limit=(int)Flux::config('GuildRankingLimit')) ?> Guilds
-	on <?php echo htmlspecialchars($server->serverName) ?>
+	<?php echo number_format($limit=(int)Flux::config('GuildRankingLimit')) ?> อันดับกิลด์
+	ในเซิร์ฟเวอร์ <?php echo htmlspecialchars($server->serverName) ?>
 </h3>
 <?php if ($guilds): ?>
 	<table class="horizontal-table table table-striped">
 		<tr>
-			<th>Rank</th>
-			<th colspan="2">Guild Name</th>
-			<th>Guild Level</th>
-			<th>Castles Owned</th>
-			<th>Members</th>
-			<th>Average Level</th>
-			<th>Experience</th>
+			<th>ลำดับ</th>
+			<th colspan="2">ชื่อกิลด์</th>
+			<th>เลเวลกิลด์</th>
+			<th>หัวหน้ากิลด์</th>
+			<th>สมาชิก</th>
+			<th>เลเวลเฉลี่ย</th>
+			<th>ค่าประสบการณ์กิลด์</th>
 		</tr>
 		<?php for ($i = 0; $i < $limit; ++$i): ?>
 		<tr<?php if (!isset($guilds[$i])) echo ' class="empty-row"'; if ($i === 0) echo ' class="top-ranked info" title="<strong>'.htmlspecialchars($guilds[$i]->name).'</strong> is the top ranked guild!"' ?>>
@@ -41,5 +41,5 @@
 		<?php endfor ?>
 	</table>
 <?php else: ?>
-<p>No guilds found. <a href="javascript:history.go(-1)">Go back</a>.</p>
+<p>ไม่พบข้อมูลกิลด์. <a href="javascript:history.go(-1)">ย้อนกลับ</a>.</p>
 <?php endif ?>

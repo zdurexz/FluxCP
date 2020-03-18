@@ -138,7 +138,7 @@
 		<th>คำสั่งไอเทม</th>
 		<td colspan="<?php echo $image ? 4 : 3 ?>">
 			<?php if ($script=$this->displayScript($item->script)): ?>
-				<?php echo $script ?>
+				<?php #echo $script ?>
 			<?php else: ?>
 				<span class="not-applicable">ไม่มี</span>
 			<?php endif ?>

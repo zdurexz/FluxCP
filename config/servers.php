@@ -4,13 +4,13 @@ return array(
 	// specify multiple server groups (however they should share the same login
 	// server whilst they are allowed to have multiple char/map pairs).
 	array(
-		'ServerName'     => 'FluxRO',
+		'ServerName'     => 'ServerName',
 		// Global database configuration (excludes logs database configuration).
 		'DbConfig'       => array(
 			//'Socket'     => '/tmp/mysql.sock',
 			//'Port'       => 3306,
-			//'Encoding'   => 'utf8', // Connection encoding -- use whatever here your MySQL tables collation is.
-			'Convert'    => 'utf8',
+			'Encoding'   => 'utf8', // Connection encoding -- use whatever here your MySQL tables collation is.
+			//'Convert'    => 'utf8',
 				// -- 'Convert' option only works when 'Encoding' option is specified and iconv (http://php.net/iconv) is available.
 				// -- It specifies the encoding to convert your MySQL data to on the website (most likely needs to be utf8)
 			'Hostname'   => '127.0.0.1',
@@ -37,7 +37,7 @@ return array(
 			'Hostname'   => '127.0.0.1',
 			'Username'   => 'root',
 			'Password'   => '123456789',
-			'Database'   => 'test_rag',
+			'Database'   => 'test_log',
 			'Persistent' => true,
 			'Timezone'   => null // Possible values is as described in the comment in DbConfig.
 		),
@@ -52,9 +52,9 @@ return array(
 		),
 		'CharMapServers' => array(
 			array(
-				'ServerName'      => 'FluxRO',
+				'ServerName'      => 'ServerName',
 				'Renewal'         => true,
-				'MaxCharSlots'    => 9,
+				'MaxCharSlots'    => 30,
 				'DateTimezone'    => null, // Specifies game server's timezone for this char/map pair. (See: http://php.net/timezones)
 				//'ResetDenyMaps'   => 'sec_pri', // Defaults to 'sec_pri'. This value can be an array of map names.
 				//'Database'        => 'ragnarok', // Defaults to DbConfig.Database

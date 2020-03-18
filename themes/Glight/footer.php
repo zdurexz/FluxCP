@@ -17,8 +17,9 @@
             </p>
       <?php endif ?>
           <div class="span12">
-            <p class="copyright">&copy; <?php echo Flux::config('SiteTitle'); ?> 2012 <br />
-            <i>Design/Coded by: <a href="http://rathena.org/board/user/715-gerome/">Gerome</a></i>
+            <p class="copyright">&copy; <?php echo Flux::config('SiteTitle'); ?> 2020 <br />
+            <i>Design/Coded by: <a href="http://rathena.org/board/user/715-gerome/">Gerome</a></i> <br />
+			<i>Modify/Translate by: <a href="https://discord.gg/nat6MFu">Durexz-Stdio,Jumbo,Azael Dev</a></i>
             </p>
             
           </div>

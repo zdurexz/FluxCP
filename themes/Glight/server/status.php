@@ -2,7 +2,7 @@
 <h2><?php echo htmlspecialchars(Flux::message('ServerStatusHeading')) ?></h2>
 <p><?php echo htmlspecialchars(Flux::message('ServerStatusInfo')) ?></p>
 <?php foreach ($serverStatus as $privServerName => $gameServers): ?>
-<h3>Server Status for <?php echo htmlspecialchars($privServerName) ?></h3>
+<h3>สถานะเซิร์ฟเวอร์ <?php echo htmlspecialchars($privServerName) ?></h3>
 <table id="server_status">
 	<tr>
 		<td class="status"><?php echo htmlspecialchars(Flux::message('ServerStatusServerLabel')) ?></td>

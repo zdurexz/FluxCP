@@ -1,19 +1,19 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Death Ranking</h2>
+<h2>อันดับการตาย</h2>
 <h3>
-	Top <?php echo number_format($limit=(int)Flux::config('DeathRankingLimit')) ?> Most Killed Characters
+	<?php echo number_format($limit=(int)Flux::config('DeathRankingLimit')) ?> อันดับการตายมากที่สุด
 	<?php if (!is_null($jobClass)): ?>
 	(<?php echo htmlspecialchars($className=$this->jobClassText($jobClass)) ?>)
 	<?php endif ?>
-	on <?php echo htmlspecialchars($server->serverName) ?>
+	ในเซิร์ฟเวอร์ <?php echo htmlspecialchars($server->serverName) ?>
 </h3>
 <?php if ($chars): ?>
 <form action="" method="get" class="search-form2">
 	<?php echo $this->moduleActionFormInputs('ranking', 'death') ?>
 	<p>
-		<label for="jobclass">Filter by job class:</label>
+		<label for="jobclass">ค้นหาโดยอาชีพ:</label>
 		<select name="jobclass" id="jobclass">
-			<option value=""<?php if (is_null($jobClass)) echo 'selected="selected"' ?>>All</option>
+			<option value=""<?php if (is_null($jobClass)) echo 'selected="selected"' ?>>ทั้งหมด</option>
 		<?php foreach ($classes as $jobClassIndex => $jobClassName): ?>
 			<option value="<?php echo $jobClassIndex ?>"
 				<?php if (!is_null($jobClass) && $jobClass == $jobClassIndex) echo ' selected="selected"' ?>>
@@ -28,13 +28,13 @@
 </form>
 <table class="horizontal-table table table-striped ">
 	<tr>
-		<th>Rank</th>
-		<th>Character Name</th>
-		<th>Deaths</th>
-		<th>Job Class</th>
-		<th>Base Level</th>
-		<th>Job Level</th>
-		<th colspan="2">Guild Name</th>
+		<th>ลำดับ</th>
+		<th>ชื่อตัวละคร</th>
+		<th>ตาย</th>
+		<th>อาชีพ</th>
+		<th>เลเวล</th>
+		<th>จ๊อบเลเวล</th>
+		<th colspan="2">ชื่อกิลด์</th>
 	</tr>
 	<?php $topRankType = !is_null($jobClass) ? $className : 'character' ?>
 	<?php for ($i = 0; $i < $limit; ++$i): ?>
@@ -73,5 +73,5 @@
 	<?php endfor ?>
 </table>
 <?php else: ?>
-<p>There are no characters. <a href="javascript:history.go(-1)">Go back</a>.</p>
+<p>ไม่พบข้อมูลตัวละคร. <a href="javascript:history.go(-1)">ย้อนกลับ</a>.</p>
 <?php endif ?>

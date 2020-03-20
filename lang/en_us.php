@@ -738,7 +738,7 @@ return array(
 	'CFTitleSubmit'			=> 'Contact Us',
 	
 	// Module: News and Pages
-	'CMSNewsHeader'			=> 'Announcements',
+	'CMSNewsHeader'			=> 'ประชาสัมพันธ์',
 	'CMSPageHeader'			=> 'Content Management System',
 	'CMSPageText'			=> 'This module enables server admins and staff to create pages within their website with no prior flux/coding knowledge. The built-in news system can also be swapped out for an rss feed by modifying the application settings.',
 	'CMSNewsTitleError'		=> 'News title is required!',

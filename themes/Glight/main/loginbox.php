@@ -8,7 +8,7 @@
 		<td bgcolor="#e1eaf3"></td>
 		<td bgcolor="#e1eaf3" valign="middle">
 			<span style="display: inline-block; margin: 2px 2px 2px 0">
-				บัญผู้ของคุณคือ <strong><a href="<?php echo $this->url('account', 'view') ?>" title="View account"><?php echo htmlspecialchars($session->account->userid) ?></a></strong>
+				ไอดีของคุณคือ <strong><a href="<?php echo $this->url('account', 'view') ?>" title="View account"><?php echo htmlspecialchars($session->account->userid) ?></a></strong>
 				เซิร์ฟเวอร์ <?php echo htmlspecialchars($session->serverName) ?>.
 				
 			<?php if (count($athenaServerNames=$session->getAthenaServerNames()) > 1): ?>

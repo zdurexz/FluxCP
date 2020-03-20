@@ -101,7 +101,8 @@ return array(
 			'add'			=> AccountLevel::ADMIN,
 			'edit'			=> AccountLevel::ADMIN,
 			'copy'			=> AccountLevel::ADMIN,
-            'iteminfo'		=> AccountLevel::ADMIN
+            'iteminfo'		=> AccountLevel::ADMIN,
+			'delete' 		=> AccountLevel::ADMIN
 		),
 		'monster'	=> array(
 			'index'			=> AccountLevel::ANYONE,

@@ -1,21 +1,21 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Viewing Guild</h2>
+<h2>ข้อมูลกิลด์</h2>
 <?php if ($guild): ?>
-<h3>Guild Information for “<?php echo htmlspecialchars($guild->name) ?>”</h3>
+<h3>ข้อมูลของกิลด์ “<?php echo htmlspecialchars($guild->name) ?>”</h3>
 <table class="vertical-table">
 	<tr>
-		<th>Guild ID</th>
+		<th>รหัสกิลด์</th>
 		<td><?php echo htmlspecialchars($guild->guild_id) ?></td>
-		<th>Guild Name</th>
+		<th>ชื่อกิลด์</th>
 		<td><?php echo htmlspecialchars($guild->name) ?></td>
-		<th>Emblem ID</th>
+		<th>รูปกิลด์</th>
 		<td><?php echo number_format($guild->emblem_id) ?></td>
 		<td><img src="<?php echo $this->emblem($guild->guild_id) ?>" /></td>
 	</tr>
 	<tr>
-		<th>Leader ID</th>
+		<th>รหัสไอดี</th>
 		<td><?php echo htmlspecialchars($guild->char_id) ?></td>
-		<th>Leader Name</th>
+		<th>ชื่อหัวกิลด์</th>
 		<td>
 			<?php if ($auth->allowedToViewCharacter): ?>
 				<?php echo $this->linkToCharacter($guild->char_id, $guild->guild_master) ?>
@@ -23,53 +23,53 @@
 				<?php echo htmlspecialchars($guild->guild_master) ?>
 			<?php endif ?>
 		</td>
-		<th>Guild Level</th>
+		<th>เลเวลกิลด์</th>
 		<td colspan="2"><?php echo number_format($guild->guild_lv) ?></td>
 	</tr>
 	<tr>
-		<th>Online Members</th>
+		<th>สมาชิกออนไลน์</th>
 		<td><?php echo number_format($guild->connect_member) ?></td>
-		<th>Capacity</th>
+		<th>จำนวนคน</th>
 		<td><?php echo number_format($guild->max_member) ?></td>
-		<th>Average Level</th>
+		<th>เลเวลเฉลี่ย</th>
 		<td colspan="2"><?php echo number_format($guild->average_lv) ?></td>
 	</tr>
 	<tr>
-		<th>Guild EXP</th>
+		<th>ค่าประสบการณ์กิลด์</th>
 		<td><?php echo number_format($guild->exp) ?></td>
 		<th>EXP until Level Up</th>
 		<td><?php echo number_format($guild->next_exp) ?></td>
-		<th>Skill Point</th>
+		<th>พ้อยสกิล</th>
 		<td colspan="2"><?php echo number_format($guild->skill_point) ?></td>
 	</tr>
 	<tr>
-		<th>Guild Notice 1</th>
+		<th>ประกาศกิลด์ 1</th>
 		<td colspan="6">
 			<?php if (trim($guild->mes1)): ?>
 				<?php echo htmlspecialchars($guild->mes1) ?>
 			<?php else: ?>
-				<span class="not-applicable">None</span>
+				<span class="not-applicable">ไม่มี</span>
 			<?php endif ?>
 		</td>
 	</tr>
 	<tr>
-		<th>Guild Notice 2</th>
+		<th>ประกาศกิลด์ 2</th>
 		<td colspan="6">
 			<?php if (trim($guild->mes2)): ?>
 				<?php echo htmlspecialchars($guild->mes2) ?></td>
 			<?php else: ?>
-				<span class="not-applicable">None</span>
+				<span class="not-applicable">ไม่มี</span>
 			<?php endif ?>
 		</td>
 	</tr>
 </table>
-<h3>Alliances of “<?php echo htmlspecialchars($guild->name) ?>”</h3>
+<h3>พันธมิตรของกิลด์ “<?php echo htmlspecialchars($guild->name) ?>”</h3>
 <?php if ($alliances): ?>
-	<p><?php echo htmlspecialchars($guild->name) ?> has <?php echo count($alliances) ?> Alliance(s).</p>
+	<p><?php echo htmlspecialchars($guild->name) ?> มีกิลด์พันธมิตร <?php echo count($alliances) ?> กิลด์</p>
 	<table class="vertical-table">
 		<tr>
-			<th>Guild ID</th>
-			<th>Guild Name</th>
+			<th>รหัสกิลด์</th>
+			<th>ชื่อกิลด์</th>
 		</tr>
 		<?php foreach ($alliances AS $alliance): ?>
 		<tr>
@@ -85,15 +85,15 @@
 		<?php endforeach ?>
 	</table>
 <?php else: ?>
-	<p>There are no alliances for this guild.</p>
+	<p>ไม่มีกิลด์พันธมิตร</p>
 <?php endif ?>
-<h3>Oppositions of “<?php echo htmlspecialchars($guild->name) ?>”</h3>
+<h3>กิลด์ปรปักษ์ “<?php echo htmlspecialchars($guild->name) ?>”</h3>
 <?php if ($oppositions): ?>
-	<p><?php echo htmlspecialchars($guild->name) ?> has <?php echo count($oppositions) ?> Opposition(s).</p>
+	<p><?php echo htmlspecialchars($guild->name) ?> มีกิลด์ปรปักษ์ <?php echo count($oppositions) ?> กิลด์</p>
 	<table class="vertical-table">
 		<tr>
-			<th>Guild ID</th>
-			<th>Guild Name</th>
+			<th>รหัสกิลด์</th>
+			<th>ชื่อกิลด์</th>
 		</tr>
 		<?php foreach ($oppositions AS $opposition): ?>
 		<tr>
@@ -109,23 +109,23 @@
 		<?php endforeach ?>
 	</table>
 <?php else: ?>
-	<p>There are no oppositions for this guild.</p>
+	<p>ไม่มีกิลด์เป็นปรปักษ์</p>
 <?php endif ?>
-<h3>Guild Members of “<?php echo htmlspecialchars($guild->name) ?>”</h3>
+<h3>จำนวนสมาชิกของกิลด์ “<?php echo htmlspecialchars($guild->name) ?>”</h3>
 <?php if ($members): ?>
-	<p><?php echo htmlspecialchars($guild->name) ?> has <?php echo count($members) ?> guild member(s).</p>
+	<p><?php echo htmlspecialchars($guild->name) ?> มีสมาชิกจำนวน <?php echo count($members) ?> คน</p>
 	<table class="vertical-table">
 		<tr>
-			<th>Name</th>
-			<th>Job Class</th>
-			<th>Base Level</th>
-			<th>Job Level</th>
-			<th>EXP Devotion</th>
-			<th>Position ID</th>
-			<th>Position Name</th>
-			<th>Guild Rights</th>
-			<th>Tax</th>
-			<th>Last Login</th>
+			<th>ชื่อ</th>
+			<th>คลาส</th>
+			<th>เลเวล</th>
+			<th>จ๊อบเลเวล</th>
+			<th>ค่าประสบการณ์ให้กิลด์</th>
+			<th>ตำแหน่ง</th>
+			<th>ฉายา</th>
+			<th>สิทธิ์ในกิลด์</th>
+			<th>ภาษี</th>
+			<th>ออนไลน์ล่าสุด</th>
 		</tr>
 		<?php foreach ($members AS $member): ?>
 		<tr>
@@ -140,7 +140,7 @@
 				<?php if ($job=$this->jobClassText($member->class)): ?>
 					<?php echo htmlspecialchars($job) ?>
 				<?php else: ?>
-					<span class="not-applicable">Unknown</span>
+					<span class="not-applicable">ไม่รู้จัก</span>
 				<?php endif ?>
 			</td>
 			<td><?php echo htmlspecialchars($member->base_level) ?></td>
@@ -156,9 +156,9 @@
 				<?php elseif ($member->mode == 1): ?>
 					<?php echo htmlspecialchars("Invite") ?>
 				<?php elseif ($member->mode == 0): ?>
-					<span class="not-applicable">None</span>
+					<span class="not-applicable">ไม่มี</span>
 				<?php else: ?>
-					<span class="not-applicable">Unknown</span>
+					<span class="not-applicable">ไม่รู้จัก</span>
 				<?php endif ?>
 			</td>
 			<td><?php echo number_format($member->exp_mode) ?>%</td>
@@ -167,16 +167,16 @@
 		<?php endforeach ?>
 	</table>
 <?php else: ?>
-	<p>There are no members in this guild.</p>
+	<p>ในกิลด์ไม่มีสมาชิก</p>
 <?php endif ?>
 <h3>Member Expulsions of “<?php echo htmlspecialchars($guild->name) ?>”</h3>
 <?php if ($expulsions): ?>
 	<p><?php echo htmlspecialchars($guild->name) ?> has <?php echo count($expulsions) ?> member expulsion(s).</p>
 	<table class="vertical-table">
 		<tr>
-			<th>Account ID</th>
-			<th>Character Name</th>
-			<th>Expulsion Reason</th>
+			<th>รหัสไอดี</th>
+			<th>ชื่อตัวละคร</th>
+			<th>เหตุผลการขับไล่</th>
 		</tr>
 		<?php foreach ($expulsions AS $expulsion): ?>
 		<tr>
@@ -192,7 +192,7 @@
 			<?php if($expulsion->mes): ?>
 				<?php echo htmlspecialchars($expulsion->mes) ?>
 			<?php else: ?>
-				<span class="not-applicable">None</span>
+				<span class="not-applicable">ไม่มี</span>
 			<?php endif ?>
 			</td>
 		</tr>
@@ -202,7 +202,7 @@
 	<p>There are no member expulsions for this guild.</p>
 <?php endif ?>
 <?php if (!Flux::config('GStorageLeaderOnly') || $amOwner || $auth->allowedToViewGuild): ?>
-	<h3>Guild Storage Items of “<?php echo htmlspecialchars($guild->name) ?>”</h3>
+<h3>ไอเทมในคลังกิลด์ของ “<?php echo htmlspecialchars($guild->name) ?>”</h3>
 	<?php if (Flux::config('GStorageLeaderOnly')): ?>
 		<p>Note: Guild Storage Items are only visible to you, the guild leader.</p>
 	<?php endif ?>
@@ -210,15 +210,15 @@
 		<p><?php echo htmlspecialchars($guild->name) ?> has <?php echo count($items) ?> guild storage item(s).</p>
 		<table class="vertical-table">
 			<tr>
-				<th>Item ID</th>
-				<th colspan="2">Name</th>
-				<th>Amount</th>
+				<th>รหัสไอเทม</th>
+				<th colspan="2">ชื่อไอเทม</th>
+				<th>จำนวน</th>
 				<th>Identified</th>
 				<th>Broken</th>
-				<th>Card0</th>
-				<th>Card1</th>
-				<th>Card2</th>
-				<th>Card3</th>
+				<th>ช่องการ์ด 1</th>
+				<th>ช่องการ์ด 2</th>
+				<th>ช่องการ์ด 3</th>
+				<th>ช่องการ์ด 4</th>
 				</th>
 			</tr>
 			<?php foreach ($items AS $item): ?>
@@ -328,5 +328,5 @@
 	<?php endif ?>
 <?php endif ?>
 <?php else: ?>
-<p>No such guild was found. <a href="javascript:history.go(-1)">Go back</a>.</p>
+<p>ไม่พบข้อมูลกิลด์. <a href="javascript:history.go(-1)">ย้อนกลับ</a>.</p>
 <?php endif ?>

@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `cp_credits` (
   `last_donation_amount` float unsigned DEFAULT NULL,
   PRIMARY KEY (`account_id`),
   KEY `account_id` (`account_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COMMENT='Donation credits balance for a given account.';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Donation credits balance for a given account.';

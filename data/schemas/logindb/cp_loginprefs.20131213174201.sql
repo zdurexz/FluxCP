@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `cp_loginprefs` (
   `create_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `account_id` (`account_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COMMENT='Account preferences' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Account preferences' AUTO_INCREMENT=1 ;

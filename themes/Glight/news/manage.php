@@ -19,8 +19,8 @@ $this->loginRequired();
 				<td><?php echo date('d-m-Y',strtotime($nrow->created))?></td>
 				<td><?php echo date('d-m-Y',strtotime($nrow->modified))?></td>
 				<td>
-					<a href="<?php echo $this->url('news', 'edit', array('id' => $nrow->id)); ?>">Edit</a> |
-					<a href="<?php echo $this->url('news', 'delete', array('id' => $nrow->id)); ?>" onclick="return confirm('<?php echo htmlspecialchars(Flux::message('CMSConfirmDeleteLabel')) ?>');">Delete</a>
+					<a href="<?php echo $this->url('news', 'edit', array('id' => $nrow->id)); ?>">แก้ไข</a> |
+					<a href="<?php echo $this->url('news', 'delete', array('id' => $nrow->id)); ?>" onclick="return confirm('<?php echo htmlspecialchars(Flux::message('CMSConfirmDeleteLabel')) ?>');">ลบ</a>
 				</td>
 			</tr>
 		<?php endforeach;?>

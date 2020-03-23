@@ -75,7 +75,7 @@ return array(
 	'OutputCleanHTML'			=> true,					// Use this if you have Tidy installed to clean your HTML output when serving pages.
 	'ShowCopyright'				=> true,					// Whether or not to show the copyright footer.
 	'ShowRenderDetails'			=> true,					// Shows the "page rendered in X seconds" and "number of queries executed: X" in the default theme.
-	'UseCleanUrls'				=> true,					// Set to true if you're running Apache and it supports mod_rewrite and .htaccess files.
+	'UseCleanUrls'				=> false,					// Set to true if you're running Apache and it supports mod_rewrite and .htaccess files.
 	'DebugMode'					=> false,					// Set to false to minimize technical details from being output by Flux. WARNING: DO NOT USE THIS OPTION ON A PUBLICALLY-ACCESSIBLE CP.
 	'UseCaptcha'				=> true,					// Use CAPTCHA image for account registration to prevent automated account creations. (Requires GD2/FreeType2)
 	'UseLoginCaptcha'			=> false,					// Use CAPTCHA image for account logins. (Requires GD2/FreeType2)
@@ -94,7 +94,7 @@ return array(
 	'MoneyDecimalPlaces'		=> 2,						// (Visual) Number of decimal places to display in amount.
 	'MoneyThousandsSymbol'		=> ',',						// (Visual) Thousandths place separator (a period in European currencies).
 	'MoneyDecimalSymbol'		=> '.',						// (Visual) Decimal separator (a comma in European currencies).
-	'AcceptDonations'			=> true,					// Whether or not to accept donations.
+	'AcceptDonations'			=> false,					// Whether or not to accept donations.
 	'PayPalIpnUrl'				=> 'www.paypal.com',		// The ipnpb.paypal.com and ipnpb.sandbox.paypal.com endpoints only accept HTTPS connections. If you currently use www.paypal.com, you should move to ipnpb.paypal.com when you update your code to use HTTPS.
 	'PayPalBusinessEmail'		=> 'admin@localhost',		// Enter the e-mail under which you have registered your business account.
 	'PayPalReceiverEmails'		=> array(					// These are the receiver e-mail addresses who are allowed to receive payment.
@@ -235,7 +235,7 @@ return array(
 			//'ForumLabel'		=> array('module' => 'forums'), 						// Built-in forum link
 			'ข่าวสาร'			=> array('module' => 'news'),
 			// Sample items for pages function.
-			'ดาวน์โหลดเกม'		=> array('module' => 'pages','action'=>'downloads'),
+			'ดาวน์โหลดเกม'		=> array('module' => 'pages','action'=>'content&path=downloads'),
 			'กฏกติกา'			=> array('module' => 'pages','action'=>'content&path=rules'),
 			// End sample items for pages function.
 		),
@@ -278,10 +278,10 @@ return array(
 			'ข้อมูลส่วนตัว'		=> array('module' => 'account'),
 			'ข้อมูลตัวละคร'	=> array('module' => 'character'),
 			//'CPLogsLabel'		=> array('module' => 'cplog'),
-			//'PagesLabel'		=> array('module' => 'pages'),
-			//'NewsLabel'			=> array('module' => 'news', 'action' => 'manage'),
-			//'GuildsLabel'		=> array('module' => 'guild'),
-			'BanIP'	=> array('module' => 'ipban'),
+			'จัดการหน้าเว็บ'		=> array('module' => 'pages'),
+			'จัดการข่าวสาร'			=> array('module' => 'news', 'action' => 'manage'),
+			'จัดการกิลด์'		=> array('module' => 'guild'),
+			'แบนไอพี'	=> array('module' => 'ipban'),
 			//'rALogsLabel'		=> array('module' => 'logdata'),
 			//'ReInstallLabel'	=> array('module' => 'install', 'action' => 'reinstall'),
 			//'SendMailLabel'		=> array('module' => 'mail'),
@@ -380,8 +380,8 @@ return array(
 			'iteminfo'		=> 'เพิ่มคำอธิบายไอเทม',
 		),
 		'pages'			=> array(
-			'index'			=> 'Manage Pages',
-			'add'			=> 'Add New Page',
+			'index'			=> 'จัดการหน้าเว็บ',
+			'add'			=> 'เพิ่มหน้าเว็บ',
 		),
 		'news'			=> array(
 			'index'			=> 'ข่าวสาร',

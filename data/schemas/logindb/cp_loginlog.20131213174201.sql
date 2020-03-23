@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `cp_loginlog` (
   `error_code` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `account_id` (`account_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

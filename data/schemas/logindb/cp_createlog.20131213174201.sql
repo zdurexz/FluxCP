@@ -14,4 +14,4 @@ CREATE TABLE IF NOT EXISTS `cp_createlog` (
   PRIMARY KEY (`id`),
   KEY `name` (`userid`),
   KEY `account_id` (`account_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

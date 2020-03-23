@@ -45,7 +45,7 @@ if (!defined('FLUX_ROOT')) exit;
 			<td align="left"><?php echo htmlspecialchars(Flux::message('CMSRequiredLabel')) ?></td>
         </tr>
         <tr>
-            <td colspan="3"><input type="submit" value="update" /></td>
+            <td colspan="3"><input type="submit" value="บันทึก" /></td>
         </tr>
     </table>
 </form>

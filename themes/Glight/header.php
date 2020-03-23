@@ -67,11 +67,11 @@
           <?php if ($session->isLoggedIn()): ?>
            <ul class="nav pull-right">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"></i>&nbsp;My Account<b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"></i>&nbsp;ข้อมูลส่วนตัว<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="<?php echo $this->url('account','view') ?>">View Account</a></li>
-                  <li><a href="<?php echo $this->url('history') ?>">History</a></li>
-                  <li><a href="<?php echo $this->url('account','logout') ?>">Log-out</a></li>
+                  <li><a href="<?php echo $this->url('account','view') ?>">ข้อมูลตัวลรคร</a></li>
+                  <li><a href="<?php echo $this->url('history') ?>">ประวัติ</a></li>
+                  <li><a href="<?php echo $this->url('account','logout') ?>">ออกจากระบบ</a></li>
                 </ul>
             </li>
             </ul>
@@ -84,11 +84,11 @@
                 <input type="hidden" name="server" value="<?php echo htmlspecialchars($session->loginAthenaGroup->serverName) ?>" />
             <?php endif ?>
               
-              <input class="span2" type="text" placeholder="Username" name="username">
-              <input class="span2" type="password" placeholder="Password" name="password">
+              <input class="span2" type="text" placeholder="บัญชีผู้ใช้" name="username">
+              <input class="span2" type="password" placeholder="รหัสผ่าน" name="password">
               <button type="submit" class="btn btn-primary"><?php echo htmlspecialchars(Flux::message('LoginButton')) ?></button>
-              or 
-              <a href="<?php echo $this->url('account','create') ?>" >Create</a>
+              หรือ 
+              <a href="<?php echo $this->url('account','create') ?>" >สร้างบัญชี</a>
             </form>
             <?php endif; ?>
             

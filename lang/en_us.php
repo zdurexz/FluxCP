@@ -56,7 +56,8 @@ return array(
 	'ItemCard1Label'          => 'การ์ดช่อง 2',
 	'ItemCard2Label'          => 'การ์ดช่อง 3',
 	'ItemCard3Label'          => 'การ์ดช่อง 4',
-             
+ 	'ItemRandOptionsLabel'    => 'สุ่มออฟชั่น',
+            
     //SIDEBAR
     //FluxCP Menu Items
     //Categories

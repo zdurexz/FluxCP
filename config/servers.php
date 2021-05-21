@@ -16,7 +16,7 @@ return array(
 			'Hostname'   => '127.0.0.1',
 			'Username'   => 'root',
 			'Password'   => '123456789',
-			'Database'   => 'test_rag',
+			'Database'   => 'ragnarok',
 			'Persistent' => true,
 			'Timezone'   => null // Example: '+0:00' is UTC.
 			// The possible values of 'Timezone' is as documented from the MySQL website:
@@ -37,7 +37,7 @@ return array(
 			'Hostname'   => '127.0.0.1',
 			'Username'   => 'root',
 			'Password'   => '123456789',
-			'Database'   => 'test_log',
+			'Database'   => 'ragnarok',
 			'Persistent' => true,
 			'Timezone'   => null // Possible values is as described in the comment in DbConfig.
 		),

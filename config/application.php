@@ -18,6 +18,7 @@ return array(
 	'ItemImageNameFormat'		=> '%d.png',				// The filename format for item images (defaults to {itemid}.png).
 	'MonsterImageNameFormat'	=> '%d.gif',				// The filename format for monster images (defaults to {monsterid}.gif).
 	'JobImageNameFormat'		=> '%d.gif',				// The filename format for job images (defaults to {jobid}.gif).
+	'DivinePrideIntegration'	=> true,					// Dowload monsters and items images from https://www.divine-pride.net if it's not exist.
 	'ForceEmptyEmblem'			=> false,					// Forcefully display empty guild emblems, helpful when you don't have GD2 installed.
 	'EmblemCacheInterval'		=> 12,						// Hourly interval to re-cache guild emblems (set to 0 to disable emblem cache).
 	'SessionCookieExpire'		=> 48,						// Duration in hours.
@@ -223,6 +224,8 @@ return array(
 	'DiscordSendOnNewTicket'		=> true,
 	'DiscordSendOnWebCommand'		=> true,
 	'DiscordSendOnMarketing'		=> true,
+
+	'TinyMCEKey'				=> 'no-key',				// Register for a key at https://www.tiny.cloud/my-account/dashboard/
 
 	// These are the main menu items that should be displayed by themes.
 	// They route to modules and actions.  Whether they are displayed or
